@@ -14,35 +14,40 @@ function App() {
   const blocksCount = useGame((state) => state.blocksCount)
 
   return (
-    <>
-      <KeyboardControls
-        map={[
-          { name: 'jump', keys: ['Space'] },
-          { name: 'leftward', keys: ['ArrowLeft', 'KeyA'] },
-          { name: 'rightward', keys: ['ArrowRight', 'KeyD'] },
-          { name: 'forward', keys: ['ArrowUp', 'KeyW'] },
-          { name: 'downword', keys: ['ArrowDown', 'KeyS'] }
-        ]
-        }
-      >
-        <Canvas shadows
-          camera={{
-            fov: 45,
-            near: 0.1,
-            far: 200,
-            position: [2.5, 4, 6]
-          }}
-        >
-          <axesHelper args={[5]} />
-          <Physics>
-            <Light />
-            <Level count={ blocksCount } />
-            <Player />
-          </Physics>
-        </Canvas>
-        <Interface />
-      </KeyboardControls>
-    </>
+    // <>
+    //   <KeyboardControls
+    //     map={[
+    //       { name: 'jump', keys: ['Space'] },
+    //       { name: 'leftward', keys: ['ArrowLeft', 'KeyA'] },
+    //       { name: 'rightward', keys: ['ArrowRight', 'KeyD'] },
+    //       { name: 'forward', keys: ['ArrowUp', 'KeyW'] },
+    //       { name: 'downword', keys: ['ArrowDown', 'KeyS'] }
+    //     ]
+    //     }
+    //   >
+    //     <Canvas shadows
+    //       camera={{
+    //         fov: 45,
+    //         near: 0.1,
+    //         far: 200,
+    //         position: [2.5, 4, 6]
+    //       }}
+    //     >
+    //       <axesHelper args={[5]} />
+    //       <Physics>
+    //         <Light />
+    //         <Level count={ blocksCount } />
+    //         <Player />
+    //       </Physics>
+    //     </Canvas>
+    //     <Interface />
+    //   </KeyboardControls>
+    // </>
+    <Canvas>
+      <Portal />
+      <ThreeD />
+      <Portal2 />
+    // </Canvas>
     
   )
 }
@@ -52,11 +57,7 @@ export default App
 
 
 
-// <Canvas>
-      {/* <Portal /> */}
-      {/* <ThreeD /> */}
-      {/* <Portal2 /> */}
-    // </Canvas>
+
 {/* <Physics />  */ }
 
 
