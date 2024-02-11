@@ -29,7 +29,7 @@ const Portal = () => {
         <>
             <OrbitControls />
             <color args={['#000000']} attach="background" />
-            {/* <Stars /> */}
+            <Stars />
             {/* <group dispose={null}>
                 <mesh geometry={nodes.portalCircle.geometry} position={[0, 0.78, 1.6]} rotation={[-Math.PI / 2, 0, 0]}>
                     <portalMaterial ref={portalMaterial}  uColorStart="hotpink" uColorEnd="white" />
@@ -43,7 +43,7 @@ const Portal = () => {
             <color args={['#000000']} attach="background" />
             <Perf position='top-left'/>
             {/* <OrbitControls /> */}
-            <group position={[0, 0, -7]}>
+            <group position={[0, 0, -7]} scale={5}>
                 <mesh geometry={nodes.baked.geometry}>
                     <meshBasicMaterial map={bakedTexture} map-flipY={false} />
                 </mesh>
