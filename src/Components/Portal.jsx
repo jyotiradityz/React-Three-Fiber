@@ -20,7 +20,7 @@ const Portal = () => {
     // const { nodes1 } = useGLTF('./Portal/portal-2.glb')
     const { nodes } = useGLTF('./Portal/portal.glb')
     console.log(nodes);
-    const bakedTexture = useTexture('./Portal/canva_baked.png')
+    const bakedTexture = useTexture('./Portal/canva_baked3.png')
     const portalMaterial = useRef()
     useFrame((state, delta) => {
         portalMaterial.current.uniforms.uTime.value += delta

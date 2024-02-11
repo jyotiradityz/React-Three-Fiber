@@ -63,7 +63,7 @@ const ThreeD = () => {
         </Center>
         <group ref={donutGroup}>
             {
-                [...Array(1000)].map((value, index) =>
+                [...Array(10)].map((value, index) =>
                     <mesh
                         key={index}
                         geometry={torusGeometry}

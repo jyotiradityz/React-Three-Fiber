@@ -45,7 +45,7 @@ function App() {
     // </>
     <Canvas>
       <Portal />
-      {/* <ThreeD /> */}
+      <ThreeD />
       {/* <Portal2 /> */}
     // </Canvas>
     
