@@ -28,9 +28,9 @@ const ThreeD = () => {
     return <>
         <Perf position='top-left' />
         {/* <OrbitControls makeDefault /> */}
-
+  
         <Center>
-            <group position={[0,10,-15]}>
+            <group position={[0,0,-30]}>  
                 <Text3D
                     font='./Fonts/helvetiker_bold.typeface.json'
                     material={material}

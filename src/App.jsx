@@ -3,7 +3,7 @@ import Light from './Project/Light'
 import { Level } from './Project/Level'
 import { Debug, Physics } from '@react-three/rapier'
 import Player from './Project/Player'
-import { KeyboardControls } from '@react-three/drei'
+import { KeyboardControls, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import Interface from './Project/Interface'
 import useGame from './Project/store/useGame'
@@ -14,6 +14,13 @@ function App() {
   const blocksCount = useGame((state) => state.blocksCount)
 
   return (
+    <>
+      <Canvas>
+        <ambientLight intensity={1}></ambientLight>
+        <OrbitControls />
+        <Fox />
+      </Canvas>
+    </>
     // <>
     //   <KeyboardControls
     //     map={[
@@ -43,12 +50,12 @@ function App() {
     //     <Interface />
     //   </KeyboardControls>
     // </>
-    <Canvas>
-      <Portal />
-      <ThreeD />
-      {/* <Portal2 /> */}
-    // </Canvas>
-    
+    // <Canvas>
+    //   {/* <Portal /> */}
+    //   {/* <ThreeD /> */}
+    //   {/* <Portal2 /> */}
+    // // </Canvas>
+
   )
 }
 
@@ -68,6 +75,7 @@ export default App
 // import Port from './PortFolio/Port'
 // import Physics from './Components/Physics'
 import Portal2 from './Components/Portal2';
+import Fox from './Components/Fox'
 
 
 {/* <Portal/> */ }
